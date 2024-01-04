@@ -18,3 +18,23 @@ void InputArray(string[] array)
     Console.WriteLine("]");
 }
 InputArray(arr);
+string[] Release(string[] array)
+{
+    int n = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+            n++;
+    }
+    string[] array2 = new string[n];
+    int m = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            array2[m] = array[i];
+            m++;
+        }
+    }
+    return array2;
+}
