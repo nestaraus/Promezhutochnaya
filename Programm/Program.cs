@@ -38,3 +38,15 @@ string[] Release(string[] array)
     }
     return array2;
 }
+void PrintArray(string[] array)
+{
+    Console.WriteLine($"Полученный массив из элементов с тремя символами:");
+    Console.Write($"[ {array[0]} ");
+    for (int i = 1; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine("]");
+}
+Release(arr);
+PrintArray(Release(arr));
